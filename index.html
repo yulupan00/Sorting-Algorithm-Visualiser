@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Sorting Algorithm Visualiser</title>
+</head>
+<script src="SortingAlgorithms.js"></script>
+
+<body>
+
+    <h1>Sorting Algorithm Visualiser</h1>
+    <p>Written by Yulu Pan</p>
+    <label for="inputArr">Enter some non-negative numbers, split by comma:</label>
+    <input type="text" id="inputArr" name="inputArr"><br><br>
+    <div>
+        <input type="range" id="speed" name="speed" min="0" max="3000"><br><br>
+        <label for="Slow ">Slow</label>
+    </div>
+    <button type="button " onclick="bubbleSort(constructArr()) ">Bubble Sort</button>
+    <button type="button " onclick="selectionSort(constructArr()) ">Seletion Sort</button>
+    <output id="result"></output>
+
+</body>
+
+<canvas id="myCanvas" width="500 " height="500 ">
+
+</canvas>
+<script>
+    function constructArr() {
+        var temp = document.getElementById('inputArr').value.split(",");
+        var result = [];
+        temp.forEach(element => {
+            result.push(parseInt(element))
+        });
+        return result;
+    }
+</script>
+
+</html>
